@@ -24,8 +24,6 @@ public class LibraryManagementSystem {
         System.out.println("========================================");
 
 
-
-
     }
 
     public boolean UserChoices(ArrayList<Book> b1, int value, HashMap<Integer,Person> p1){
@@ -44,7 +42,6 @@ public class LibraryManagementSystem {
             break;
             case 5: System.out.println("Thank you for using our Library");
                  return true;
-
             default:System.out.println("No such choice exists");
         }
         return false;
@@ -80,13 +77,6 @@ public class LibraryManagementSystem {
 
         }
 
-
-
-
-
-
-
     }
-
 
 }
