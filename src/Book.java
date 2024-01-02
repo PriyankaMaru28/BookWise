@@ -1,4 +1,4 @@
-public class Book implements Comparable<Book> {
+public class Book {
     String title;
     String author;
     int isbn;
@@ -38,15 +38,5 @@ public class Book implements Comparable<Book> {
 
     public static void main(String[] args){
 
-    }
-
-
-    @Override
-    public int compareTo(Book book) {
-
-        if(this.isbn > book.isbn){
-            return 1;
-        }else
-        return 0 ;
     }
 }

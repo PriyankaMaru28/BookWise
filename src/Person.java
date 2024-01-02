@@ -1,6 +1,5 @@
 import java.util.HashMap;
 
-
 public abstract class Person {
 
  String username;
