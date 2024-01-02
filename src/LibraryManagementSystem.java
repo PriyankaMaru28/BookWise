@@ -12,27 +12,31 @@ public class LibraryManagementSystem {
         System.out.println("Library Management System...   ");
         System.out.println("Before sorting...   ");
         System.out.println("========================================");
-//        for(Book ele:b1){
-//            System.out.println(ele.title +" "+ ele.author +" "+ ele.isbn+" belongs to :"+ele.belongsTo);
-//        }
-//        System.out.println("========================================");
-//        System.out.println("After sorting...   ");
+        for(Book ele:b1){
+            System.out.println(ele.title +" "+ ele.author +" "+ ele.isbn+" belongs to :"+ele.belongsTo);
+        }
+        System.out.println("========================================");
+        System.out.println("After sorting...   ");
 
-//        b1.stream().sorted().forEach(ele ->  System.out.println(ele.title +" "+ ele.author +" "+ ele.isbn+" belongs to :"+ele.belongsTo));
+     //  ArrayList<Book> newBook = b1.stream().sorted().forEach(ele ->  System.out.println(ele.title +" "+ ele.author +" "+ ele.isbn+" belongs to :"+ele.belongsTo));
 
-
+//        ArrayList<Book> newBook = b1;
+//
+//        newBook.stream().sorted().forEach(ele ->  System.out.println(ele.title +" "+ ele.author +" "+ ele.isbn+" belongs to :"+ele.belongsTo));
+//
         System.out.println("===============DISPLAY THE BOOKS=========================");
         bm1.DisplayBook(b1);
 //        for(Book ele:b1){
 //            System.out.println(ele.title +" "+ ele.author +" "+ ele.isbn+" belongs to :"+ele.belongsTo);
 //        }
-        System.out.println("========================================");
+//        System.out.println("========================================");
 
 
     }
 
     public boolean UserChoices(ArrayList<Book> b1, int value, HashMap<Integer,Person> p1){
         BookManager bm = new BookManager();
+        Scanner sc = new Scanner(System.in);
         switch (value){
             case 1:  System.out.println("Register as a Member");
             Member p = new Member();
@@ -42,18 +46,24 @@ public class LibraryManagementSystem {
                 System.out.println("Add Book");
                 AddBook(b1);
                 break;
-            case 3: System.out.println("Remove Book");
+            case 3: System.out.println("Remove Book while checking out");
+            System.out.println("Enter the title of Book: ");
+            String removeBook = sc.nextLine();
+            bm.RemoveBook(b1,removeBook);
+
             break;
             case 4: System.out.println("Search for book");
 
                 System.out.println("Enter the isbn no:");
-                Scanner sc = new Scanner(System.in);
+
                 int isbn = sc.nextInt();
                 bm.SearchBook(b1,isbn);
             break;
             case 5: bm.DisplayBook(b1);
             break;
-            case 6: System.out.println("Thank you for using our Library");
+            case 6: System.out.println("Display all users");
+                break;
+            case 7: System.out.println("Thank you for using our Library");
                  return true;
             default:System.out.println("No such choice exists");
         }
@@ -92,8 +102,6 @@ public class LibraryManagementSystem {
         b1.add(b3);
 
         LibraryManagementSystem lms = new LibraryManagementSystem();
-
-
 
     while(!exitProgram) {
 

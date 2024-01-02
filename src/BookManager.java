@@ -59,6 +59,17 @@ public class BookManager {
         b1.stream().forEach(ele->System.out.println("title : "+ele.title + " Author: " + ele.author + " " + ele.isbn));
     }
 
+    /**
+     * Return the updated books and call the display book function
+     * @param b1
+     * @param removeBook
+     */
+    public void RemoveBook(ArrayList<Book> b1,String removeBook){
+        System.out.println("Book to be removed : "+removeBook);
+
+        b1.stream().filter(ele -> !(ele.getTitle().equals(removeBook))).forEach(ele->System.out.println("title : "+ele.title + " Author: " + ele.author + " " + ele.isbn));
+
+    }
 
 
 
