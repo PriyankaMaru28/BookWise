@@ -7,7 +7,15 @@ import java.util.Date;
  */
 
 public class LoanManager {
-    Date dueDate;
+    public Date getCurrDate() {
+        return currDate;
+    }
+
+    public void setCurrDate(Date currDate) {
+        this.currDate = currDate;
+    }
+
+    Date currDate;
     Date borrowedDate;
     Book b;
     String MemberName;
@@ -16,16 +24,6 @@ public class LoanManager {
 
     public void setMemberName(String memberName) {
         MemberName = memberName;
-    }
-
-
-
-    public Date getDueDate() {
-        return dueDate;
-    }
-
-    public void setDueDate(Date dueDate) {
-        this.dueDate = dueDate;
     }
 
     public Date getBorrowedDate() {
