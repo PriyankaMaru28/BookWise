@@ -1,8 +1,21 @@
+import java.util.Date;
+
 public class Book {
     String title;
     String author;
     int isbn;
     String belongsTo;
+    Date borrowedDate;
+
+
+    public Date getBorrowedDate() {
+        return borrowedDate;
+    }
+
+    public void setBorrowedDate(Date borrowedDate) {
+        this.borrowedDate = borrowedDate;
+    }
+
 
     public String getBelongsTo() {
         return belongsTo;
