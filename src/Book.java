@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Book {
@@ -5,17 +6,24 @@ public class Book {
     String author;
     int isbn;
     String belongsTo;
-    Date borrowedDate;
+    LocalDate borrowedDate;
+    boolean isAvailabe;
 
+    public boolean isAvailabe() {
+        return isAvailabe;
+    }
 
-    public Date getBorrowedDate() {
+    public void setAvailabe(boolean availabe) {
+        isAvailabe = availabe;
+    }
+
+    public LocalDate getBorrowedDate() {
         return borrowedDate;
     }
 
-    public void setBorrowedDate(Date borrowedDate) {
+    public void setBorrowedDate(LocalDate borrowedDate) {
         this.borrowedDate = borrowedDate;
     }
-
 
     public String getBelongsTo() {
         return belongsTo;

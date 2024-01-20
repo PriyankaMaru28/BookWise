@@ -29,7 +29,6 @@ public class Member extends Person {
     }
 
     public void Displayuser(){
-
     }
 
     public static void main(String[] args) {
